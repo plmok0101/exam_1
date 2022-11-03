@@ -1,4 +1,4 @@
-document.write("<script src='asset/js/jquery.js'></script>");
+document.write("<script src='jquery.js'></script>");
 function aaa(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
