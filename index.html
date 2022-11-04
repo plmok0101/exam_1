@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         function check(){
             var check_email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
@@ -28,12 +29,27 @@
                 }
                 
         }
-        $
+        $(document).ready(function(){
+            $(".facebook").click(function(){
+                $(".popup").css({"display":"block"})
+            })
+
+            $(".close").click(function(){
+                $(".popup").css({"display":"none"})
+            })
+
+            $(".google").click(function(){
+                $(".popup2").css({"display":"block"})
+            })
+            $(".close").click(function(){
+                $(".popup2").css({"display":"none"})
+            })
+        })
     </script>
 </head>
 <body>
-    <main>
-        <header>
+    <main class="main1">
+        <header class="header1">
             <h1>LOGIN</h1>
         </header>
         <section>
@@ -54,6 +70,49 @@
             <button type="button" class="facebook">Facebook</button>
             <button type="button" class="google">Google</button>
             </form>
+        </section>
+    </main>
+
+    <main class="popup">
+        <header class="header2">
+            <h1>FacebookLogin</h1>
+        </header>
+        <section>
+            <form id="form" name="form">
+            <br/>
+            <label class="abc p" for="email">Email</label>
+            <input type="email" id="email" placeholder="이메일을입력하세요." />
+            <label class="abc p" for="password">Password</label>
+            <input type="password" id="password" placeholder="비밀번호를입력하세요.">
+            <p id="forgotpassword" class="p">
+                <a href="" class="forgotpassword">Forgot password?</a>
+            </p>
+            <button name="login" type="submit" class="login" onclick="return check();">login</button>
+            </p>
+            </form>
+            <button type="button" class="close" onclick="return close();">닫기</button>
+        </section>
+    </main>
+
+    
+    <main class="popup2">
+        <header class="header3">
+            <h1>GoogleLogin</h1>
+        </header>
+        <section>
+            <form id="form" name="form">
+            <br/>
+            <label class="abc p" for="email">Email</label>
+            <input type="email" id="email" placeholder="이메일을입력하세요." />
+            <label class="abc p" for="password">Password</label>
+            <input type="password" id="password" placeholder="비밀번호를입력하세요.">
+            <p id="forgotpassword" class="p">
+                <a href="" class="forgotpassword">Forgot password?</a>
+            </p>
+            <button name="login" type="submit" class="login" onclick="return check();">login</button>
+            </p>
+            </form>
+            <button type="button" class="close" onclick="return close();">닫기</button>
         </section>
     </main>
 </body>

@@ -1,4 +1,4 @@
-function aaa(){
+/*function aaa(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     if(document.form.email.value.length==0){
@@ -26,4 +26,4 @@ function CheckEmail(str){
     }else {                       
        return true;         
     }                            
-}
+}*/
