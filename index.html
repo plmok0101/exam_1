@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script>
+        function check(){
+            var check_email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+            if($("#email").val() == ""){
+                    alert("이메일을 입력해주세요.");
+                    $("#email").focus();
+                    return false;
+                }
+                if(!check_email.test($("#email").val())){
+                    alert("이메일형식에 맞게 입력해주세요");
+                    $("#email").focus();
+                    return false;
+                }
+                
+                if($("#password").val() == ""){
+                    alert("비밀번호를 입력해주세요.");
+                    $("#password").focus();
+                    return false;
+                }
+                
+        }
+        $
+    </script>
 </head>
 <body>
     <main>
@@ -23,7 +46,7 @@
             <p id="forgotpassword" class="p">
                 <a href="" class="forgotpassword">Forgot password?</a>
             </p>
-            <button name="login" type="submit" class="login" onclick="return aaa();">login</button>
+            <button name="login" type="submit" class="login" onclick="return check();">login</button>
             <p class="align_center p">New to our platform?
                 <a>Signup</a>
             </p>

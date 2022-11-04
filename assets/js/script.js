@@ -1,4 +1,3 @@
-document.write("<script src='jquery.js'></script>");
 function aaa(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
