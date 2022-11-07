@@ -19,7 +19,6 @@ function check(){
 }
 
 $(document).ready(function(){
-    alert("reset");
     $(".popupButton").click(function(){
         if($(this).hasClass("facebook")){
             window.open("https://ko-kr.facebook.com/","fecebookPopup","width=800, height=800");
