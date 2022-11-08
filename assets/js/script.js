@@ -32,14 +32,8 @@ $(document).ready(function(){
         }
 
         $.getJSON('assets/json/login.json', function(data){
-            var email;
-            var password; 
-            $.each(data, function(i, item){
-                email = (item.email);
-                password = (item.password);
-            })
-            if(email == inputEmail){
-                if(password == inputPassword){
+            if((data.email) == inputEmail){
+                if((data.password) == inputPassword){
                     alert("로그인 되었습니다.");
                 }else{
                     alert("비밀번호가 올바르지 않습니다.");
@@ -48,5 +42,6 @@ $(document).ready(function(){
                 alert("이메일이 올바르지 않습니다");
             }
         })
+        
     })
 })
