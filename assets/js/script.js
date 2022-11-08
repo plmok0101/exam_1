@@ -38,10 +38,6 @@ $(document).ready(function(){
                 email = (item.email);
                 password = (item.password);
             })
-            console.log(email);
-            console.log(password);
-            console.log(inputEmail);
-            console.log(inputPassword);
             if(email == inputEmail){
                 if(password == inputPassword){
                     alert("로그인 되었습니다.");
