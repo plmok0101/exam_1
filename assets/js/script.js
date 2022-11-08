@@ -18,17 +18,16 @@ $(document).ready(function(){
                 alert("이메일을 입력해주세요.");
                 $("#email").focus();
                 return false;
-        }
+        }    
         if(!check_email.test($("#email").val())){
-            alert("이메일형식에 맞게 입력해주세요");
-            $("#email").focus();
-            return false;
-        }
-            
+                alert("이메일형식에 맞게 입력해주세요");
+                $("#email").focus();
+                return false;
+        } 
         if($("#password").val() == ""){
-            alert("비밀번호를 입력해주세요.");
-            $("#password").focus();
-            return false;
+                alert("비밀번호를 입력해주세요.");
+                $("#password").focus();
+                return false;
         }
 
         $.getJSON('assets/json/login.json', function(data){
