@@ -44,7 +44,7 @@ $(document).ready(function(){
             if(test.toString() == account.toString()){
                 alert("로그인되었습니다");
             }else{
-                alert("로그인실패");
+                alert("이메일과 비밀번호가 맞지 않습니다");
             }
         })
 
