@@ -30,8 +30,23 @@ $(document).ready(function(){
             $("#password").focus();
             return false;
         }
-        $.getJSON( "assets/login.json", [email = $("#email").val()]{
-        })
-    })
 
+        $.getJSON('assets/json/login.json', function(data){
+            var test = [];
+            var account = [];
+            account.push($("#email").val());
+            account.push($("#password").val());
+            $.each(data, function(i, item){
+                test.push(item.email);
+                test.push(item.password);
+            })
+
+            if(test.toString() == account.toString()){
+                alert("로그인되었습니다");
+            }else{
+                alert("로그인실패");
+            }
+        })
+
+    })
 })
