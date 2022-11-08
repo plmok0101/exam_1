@@ -11,8 +11,8 @@ $(document).ready(function(){
 
     $("#form").submit(function(){
         var check_email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-        var email = $("#email").val();
-        var password = $("#password").val();
+        var inputEmail = $("#email").val();
+        var inputPassword = $("#password").val();
 
         if($("#email").val() == ""){
                 alert("이메일을 입력해주세요.");
@@ -32,21 +32,25 @@ $(document).ready(function(){
         }
 
         $.getJSON('assets/json/login.json', function(data){
-            var test = [];
-            var account = [];
-            account.push($("#email").val());
-            account.push($("#password").val());
+            var email;
+            var password; 
             $.each(data, function(i, item){
-                test.push(item.email);
-                test.push(item.password);
+                email = (item.email);
+                password = (item.password);
             })
-
-            if(test.toString() == account.toString()){
-                alert("로그인되었습니다");
+            console.log(email);
+            console.log(password);
+            console.log(inputEmail);
+            console.log(inputPassword);
+            if(email == inputEmail){
+                if(password == inputPassword){
+                    alert("로그인 되었습니다.");
+                }else{
+                    alert("비밀번호가 올바르지 않습니다.");
+                }
             }else{
-                alert("이메일과 비밀번호가 맞지 않습니다");
+                alert("이메일이 올바르지 않습니다");
             }
         })
-
     })
 })
