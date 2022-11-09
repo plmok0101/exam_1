@@ -10,9 +10,9 @@ $(document).ready(function(){
     })
 
     $("#form").submit(function(){
-        var check_email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-        var inputEmail = $("#email").val();
-        var inputPassword = $("#password").val();
+        let check_email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+        let inputEmail = $("#email").val();
+        let inputPassword = $("#password").val();
 
         if($("#email").val() == ""){
                 alert("이메일을 입력해주세요.");
